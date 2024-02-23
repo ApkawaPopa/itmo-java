@@ -1,98 +1,10 @@
 # Тесты к курсу «Парадигмы программирования»
 
-[Условия домашних заданий](https://www.kgeorgiy.info/courses/paradigms/homeworks.html)
-
-
-## Домашнее задание 15. Разбор выражений на Prolog
-
-Модификации
- * *Base*
-    * Код должен находиться в файле `prolog-solutions/expression.pl`.
-    * [Исходный код тестов](prolog/prtest/parsing/ParserTest.java)
-        * Запускать c указанием модификации и сложности (`easy` или `hard`).
- * *Variables*. Дополнительно реализовать поддержку:
-    * Переменных, состоящих из произвольного количества букв `XYZ` в любом регистре
-        * Настоящее имя переменной определяется первой буквой ее имени
-
-
-## Домашнее задание 14. Дерево поиска на Prolog
-
-Модификации
- * *Базовая*
-    * Код должен находиться в файле `prolog-solutions/tree-map.pl`.
-    * [Исходный код тестов](prolog/prtest/tree/PrologTreeTest.java)
-        * Запускать c указанием сложности (`easy` или `hard`) и модификации
- * *Floor* (36, 37)
-    * Добавьте правило `map_floorKey(Map, Key, FloorKey)`,
-      возвращающее максимальный ключ, меньший либо равный заданному.
- * *SubMap* (38, 39)
-    * Добавьте правило `map_subMapSize(Map, FromKey, ToKey, Size)`,
-      возвращающее число пар в диапазоне `[FromKey, ToKey)`.
- * *MinMax* (31, 34, 35)
-    * Добавьте правила:
-        * `map_minKey(Map, Key)`, возвращающее минимальный ключ в дереве;
-        * `map_maxKey(Map, Key)`, возвращающее максимальный ключ в дереве.
- * *Replace* (32, 33)
-    * Добавьте правило `map_replace(Map, Key, Value, Result)`,
-        заменяющее значения ключа на указанное, если ключ присутствует.
-
-
-
-## Домашнее задание 13. Простые числа на Prolog
-
-Модификации
- * *Базовая*
-    * Код должен находиться в файле `prolog-solutions/primes.pl`.
-    * [Исходный код тестов](prolog/prtest/primes/PrologPrimesTest.java)
-        * Запускать c указанием сложности (`easy`, `hard` или `bonus`) и модификации.
- * *Palindrome* (36, 37)
-    * Добавьте правило `prime_palindrome(N, K)`,
-      определяющее, является ли `N` простым палиндромом в `K`-ичной системе счисления:
-      `prime_palindrome(101, 10)`.
- * *Lcm* (38, 39)
-    * Добавьте правило `lcm(A, B, LCM)`,
-      подсчитывающее НОК(`A`, `B`) через разложение на простые множители:
-        `lcm(4, 6, 12)`.
- * *Unique* (31, 34, 35)
-    * Добавьте правило `unique_prime_divisors(N, Divisors)`,
-      возвращающее простые делители без повторов:
-        `unique_prime_divisors(99, [3, 11])`.
- * *Nth* (32, 33)
-    * Добавьте правило `nth_prime(N, P)`, подсчитывающее `N`-ое простое число:
-        `nth_prime(1, 2)`, `nth_prime(26, 101)`.
-
-
-
-## Исходный код к лекциям по Prolog
-
-Запуск Prolog
- * [Windows](prolog/RunProlog.cmd)
- * [*nix](prolog/RunProlog.sh)
-
-Лекция 1. Факты, правила и вычисления
- * [Учебный план](prolog/examples/1_1_plan.pl)
- * [Вычисления](prolog/examples/1_2_calc.pl)
- * [Списки](prolog/examples/1_3_lists.pl)
- * [Правила высшего порядка](prolog/examples/1_4_high-order.pl)
-
-Лекция 2. Задачи, унификация и объекты
- * [Задача о расстановке ферзей](prolog/examples/2_1_queens.pl)
- * [Задача Эйнштейна](prolog/examples/2_2_einstein.pl)
- * [Арифметические выражения](prolog/examples/2_3_expressions.pl)
-
-Лекция 3. Преобразование в строку и разбор
- * [Преобразование через термы](prolog/examples/3_1_terms.pl)
- * [Преобразование через списки](prolog/examples/3_2_chars.pl)
- * [Грамматики](prolog/examples/3_3_grammar.pl)
-
-
 ## Домашнее задание 12. Комбинаторные парсеры
 
 Модификации
  * *Base*
     * Код должен находиться в файле `clojure-solutions/expression.clj`.
-    * [Исходный код тестов](clojure/cljtest/parsing/ParserTest.java)
-        * Запускать c указанием модификации и сложности (`easy` или `hard`).
  * *Variables* (31-33). Дополнительно реализовать поддержку:
     * Переменных, состоящих из произвольного количества букв `XYZ` в любом регистре
         * Настоящее имя переменной определяется первой буквой ее имени
@@ -116,15 +28,12 @@
         * `BitImpl` (`=>`) – импликация (правоассоциативна): `4 => 1` примерно равно -2
         * `BitIff` (`<=>`) - тогда и только тогда: `2 <=> 6` примерно равно -1.34827E308
         * операции по увеличению приоритета: `<=>`, `=>`, операции модификации *Bitwise*
-   
 
 ## Домашнее задание 11. Объектные выражения на Clojure
 
 Модификации
  * *Базовая*
     * Код должен находиться в файле `clojure-solutions/expression.clj`.
-    * [Исходный код тестов](clojure/cljtest/object/ObjectTest.java)
-        * Запускать c указанием модификации и сложности (`easy` или `hard`).
  * *MeanVarn* (36, 37). Дополнительно реализовать поддержку:
     * операций произвольного числа аргументов:
         * `Mean` (`mean`) – математическое ожидание аргументов, `(mean 1 2 6)` равно 3;
@@ -148,8 +57,6 @@
 Модификации
  * *Base*
     * Код должен находиться в файле `clojure-solutions/expression.clj`.
-    * [Исходный код тестов](clojure/cljtest/functional/FunctionalTest.java)
-        * Запускать c указанием модификации и сложности (`easy` или `hard`).
  * *MeanVarn* (36, 37). Дополнительно реализовать поддержку:
     * операций произвольного числа аргументов:
         * `mean` – математическое ожидание аргументов, `(mean 1 2 6)` равно 3;
@@ -173,8 +80,6 @@
 Модификации
  * *Базовая*
     * Код должен находиться в файле `clojure-solutions/linear.clj`.
-    * [Исходный код тестов](clojure/cljtest/linear/LinearTest.java)
-        * Запускать c указанием сложности (`easy` или `hard`) и модификации.
  * *Cuboid* (31, 32, 33)
     * Назовем _кубоидом_ трехмерную прямоугольную таблицу чисел.
     * Добавьте операции поэлементного 
@@ -197,7 +102,6 @@
         симплексов.
         Например, `(x+ [[1 2] [3]] [[5 6] [7]])` 
         должно быть равно `[[6 8] [10]]`.
-    * [Исходный код тестов](clojure/cljtest/linear/SimplexTester.java)
  * *Broadcast* (38, 39)
     * Назовем _тензором_ многомерную прямоугольную таблицу чисел.
     * _Форма_ тензора – последовательность чисел
@@ -224,57 +128,6 @@
       должны быть предварительно распространены до тензоров большей размерности.
       Например, `(hb+ 1 [ [10 20 30] [40 50 60] ] [100 200 300] )` 
       должно быть равно `[ [111 221 331] [141 251 361] ]`.
-    * [Исходный код тестов](clojure/cljtest/linear/HeadBroadcastTester.java)
-
-
-## Исходный код к лекциям по Clojure
-
-Документация
- * [Clojure Reference](https://clojure.org/reference/documentation)
- * [Clojure Cheat Sheet](https://clojure.org/api/cheatsheet)
-
-Запуск Clojure
- * Консоль: [Windows](clojure/RunClojure.cmd), [*nix](clojure/RunClojure.sh)
-    * Интерактивный: `RunClojure`
-    * С выражением: `RunClojure --eval "<выражение>"`
-    * Скрипт: `RunClojure <файл скрипта>`
-    * Справка: `RunClojure --help`
- * IDE
-    * IntelliJ Idea: [плагин Cursive](https://cursive-ide.com/userguide/)
-    * Eclipse: [плагин Counterclockwise](https://marketplace.eclipse.org/content/counterclockwise)
-
-[Скрипт со всеми примерами](clojure/examples.clj)
-
-Лекция 1. Функции
- * [Введение](clojure/examples/1_1_intro.clj)
- * [Функции](clojure/examples/1_2_functions.clj)
- * [Списки](clojure/examples/1_3_lists.clj)
- * [Вектора](clojure/examples/1_4_vectors.clj)
- * [Функции высшего порядка](clojure/examples/1_5_functions-2.clj)
-
-Лекция 2. Внешний мир
- * [Ввод-вывод](clojure/examples/2_1_io.clj)
- * [Разбор и гомоиконность](clojure/examples/2_2_read.clj)
- * [Порядки вычислений](clojure/examples/2_3_evaluation-orders.clj)
- * [Потоки](clojure/examples/2_4_streams.clj)
- * [Отображения и множества](clojure/examples/2_5_maps.clj)
-
-Лекция 3. Объекты
- * [Прототипное наследование](clojure/examples/3_1_js-objects.clj)
-    * Библиотека для ДЗ: [proto.clj](clojure/examples/proto.clj)
- * [Java-классы](clojure/examples/3_2_java-objects.clj)
-    
-Лекция 4. Разное
- * [Макросы](clojure/examples/4_1_macro.clj)
- * [Изменяемое состояние](clojure/examples/4_2_mutable-state.clj)
- * [Числа Чёрча](clojure/examples/4_3_church.clj)
-
-Лекция 5. Комбинаторные парсеры
- * [Базовые функции](clojure/examples/5_1_base.clj)
- * [Комбинаторы](clojure/examples/5_2_combinators.clj)
-    * Библиотека для ДЗ [parser.clj](clojure/examples/parser.clj)
- * [JSON](clojure/examples/5_3_json.clj)
- * [Макросы](clojure/examples/5_4_macro.clj)
 
 
 ## Домашнее задание 8. Обработка ошибок на JavaScript
@@ -282,30 +135,24 @@
 Модификации
  * *Base*
     * Код должен находиться в файле `javascript-solutions/objectExpression.js`.
-    * [Исходный код тестов](javascript/jstest/prefix/ParserTest.java)
-        * Запускать c указанием модификации и сложности (`easy` или `hard`).
  * *Prefix*: *SinhCosh* (31, 32, 33). Дополнительно реализовать поддержку:
     * унарных операций:
         * `Sinh` (`sinh`) – гиперболический синус, `(sinh 3)` немного больше 10;
         * `Cosh` (`cosh`) – гиперболический косинус, `(cosh 3)` немного меньше 10.
-    * [Исходный код тестов](javascript/jstest/prefix/PrefixTest.java)
  * *Prefix*: *MeanVar* (34, 35). Дополнительно реализовать поддержку:
     * операций произвольного числа аргументов:
         * `Mean` (`mean`) – математическое ожидание аргументов, `(mean 1 2 6)` равно 3;
         * `Var` (`var`) – дисперсия аргументов, `(var 2 5 11)` равно 14.
-    * [Исходный код тестов](javascript/jstest/prefix/PrefixTest.java)
  * *PostfixMeanVar* (36, 37). Дополнительно реализовать поддержку:
     * выражений в постфиксной записи: `(2 3 +)` равно 5
     * операций произвольного числа аргументов:
         * `Mean` (`mean`) – математическое ожидание аргументов, `(1 2 6 mean)` равно 3;
         * `Var` (`var`) – дисперсия аргументов, `(2 5 11 var)` равно 14.
-    * [Исходный код тестов](javascript/jstest/prefix/PostfixTest.java)
  * *PostfixSumexpSoftmax* (38, 39). Дополнительно реализовать поддержку:
     * выражений в постфиксной записи: `(2 3 +)` равно 5
     * унарных операций:
         * `Sumexp` (`sumexp`) – сумма экспонент, `(8 8 9 sumexp)` примерно равно 14065;
         * `Softmax` (`softmax`) – [softmax](https://ru.wikipedia.org/wiki/Softmax) первого аргумента, `(1 2 3 softmax)` примерно 0.09.
-    * [Исходный код тестов](javascript/jstest/prefix/PostfixTest.java)
 
 
 
@@ -314,8 +161,6 @@
 Модификации
  * *Base*
     * Код должен находиться в файле `javascript-solutions/objectExpression.js`.
-    * [Исходный код тестов](javascript/jstest/object/ObjectTest.java)
-        * Запускать c указанием модификации и сложности (`easy`, `hard` или `bonus`).
  * *SinhCosh* (31, 34, 45). Дополнительно реализовать поддержку:
     * унарных функций:
         * `Sinh` (`sinh`) – гиперболический синус, `3 sinh` немного больше 10;
@@ -339,13 +184,6 @@
 Модификации
  * *Базовая*
     * Код должен находиться в файле `javascript-solutions/functionalExpression.js`.
-    * [Исходный код тестов](javascript/jstest/functional/FunctionalTest.java)
-        * Запускать c аргументом `hard` или `easy`;
- * *Mini* (для тестирования)
-    * Не поддерживаются бинарные операции
-    * Код находится в файле [functionalMiniExpression.js](javascript/functionalMiniExpression.js).
-        * Запускать c аргументом `hard` или `easy`, например
-          `testjs jstest.functional.MiniTest hard`
  * *Pie* (31-33). Дополнительно реализовать поддержку:
     * констант:
         * `pi` – π;
@@ -372,77 +210,12 @@
         * `avg3` – арифметическое среднее трёх аргументов, `1 2 3 avg3` равно 2;
         * `med5` – медиана пяти аргументов, `1 2 -10 100 -100 med5` равно 1.
 
-
-Запуск тестов
- * Для запуска тестов используется [GraalJS](https://github.com/graalvm/graaljs)
-   (часть проекта [GraalVM](https://www.graalvm.org/), вам не требуется их скачивать отдельно)
- * Для запуска тестов можно использовать скрипты [TestJS.cmd](javascript/TestJS.cmd) и [TestJS.sh](javascript/TestJS.sh)
-    * Репозиторий должен быть скачан целиком.
-    * Скрипты должны находиться в каталоге `javascript` (их нельзя перемещать, но можно вызывать из других каталогов).
-    * В качестве аргументов командной строки указывается полное имя класса теста и модификация, 
-      например `jstest.functional.FunctionalTest hard base`.
- * Для самостоятельно запускаго из консоли необходимо использовать командную строку вида:
-    `java -ea --module-path=<js>/graal --class-path <js> jstest.functional.FunctionalTest {hard|easy} <variant>`, где
-    * `-ea` – включение проверок времени исполнения;
-    * `--module-path=<js>/graal` путь к модулям Graal (здесь и далее `<js>` путь к каталогу `javascript` этого репозитория);
-    * `--class-path <js>` путь к откомпилированным тестам;
-    * {`hard`|`easy`} указание тестируемой сложности;
-    * `<variant>`} указание тестируемой модификации.
- * При запуске из IDE, обычно не требуется указывать `--class-path`, так как он формируется автоматически.
-   Остальные опции все равно необходимо указать.
- * Troubleshooting
-    * `Error occurred during initialization of boot layer java.lang.module.FindException: Module org.graalvm.truffle not found, required by jdk.internal.vm.compiler` – неверно указан `--module-path`;
-    * `Graal.js not found` – неверно указаны `--module-path`
-    * `Error: Could not find or load main class jstest.functional.FunctionalTest` – неверно указан `--class-path`;
-    * `Exception in thread "main" java.lang.AssertionError: You should enable assertions by running 'java -ea jstest.functional.FunctionalExpressionTest'` – не указана опция `-ea`;
-    * `Exception in thread "main" jstest.EngineException: Script 'functionalExpression.js' not found` – в текущем каталоге отсутствует решение (`functionalExpression.js`)
-
-
-## Исходный код к лекциям по JavaScript
-
-[Скрипт с примерами](javascript/examples.js)
-
-Запуск примеров
- * [В браузере](javascript/RunJS.html)
- * Из консоли
-    * [на Java](javascript/RunJS.java): [RunJS.cmd](javascript/RunJS.cmd), [RunJS.sh](javascript/RunJS.sh)
-    * [на node.js](javascript/RunJS.node.js): `node RunJS.node.js`
-
-Лекция 1. Типы и функции
- * [Типы](javascript/examples/1_1_types.js)
- * [Функции](javascript/examples/1_2_functions.js)
- * [Функции высшего порядка](javascript/examples/1_3_functions-hi.js).
-   Обратите внимание, что функции `array.map` и 
-   `array.reduce` (аналог `leftFold` входят в стандартную библиотеку).
-   Обратите внимание на реализацию функции `mCurry`.
- * [Пример: вектора и матрицы](javascript/examples/1_4_vectors.js).
-
-Лекция 2. Объекты и замыкания
- * [Поля](javascript/examples/2_1_fields.js)
- * [Методы](javascript/examples/2_2_methods.js)
- * [Замыкания](javascript/examples/2_3_closures.js)
- * [Модули](javascript/examples/2_4_modules.js)
- * [Пример: стеки](javascript/examples/2_5_stacks.js)
-
-Лекция 3. Другие возможности
- * [Обработка ошибок](javascript/examples/3_1_errors.js)
- * [Чего нет в JS](javascript/examples/3_2_no.js)
- * [Стандартная библиотека](javascript/examples/3_3_builtins.js)
- * [Работа со свойствами](javascript/examples/3_4_properties.js)
- * [Методы и классы](javascript/examples/3_5_classes.js)
- * [JS 6+](javascript/examples/3_6_js6.js)
- * Модули: 
-   [объявление](javascript/examples/3_7_js6_module.mjs)
-   [использование](javascript/examples/3_7_js6_module_usage.mjs)
- * [Простейший ввод-вывод](javascript/examples/3_8_io.js)
-
-
 ## Домашнее задание 5. Вычисление в различных типах
 
 Модификации
  * *Base*
     * Класс `expression.generic.GenericTabulator` должен реализовывать интерфейс
-      [Tabulator](java/expression/generic/Tabulator.java) и
+      `Tabulator` и
       строить трехмерную таблицу значений заданного выражения.
         * `mode` – режим вычислений:
            * `i` – вычисления в `int` с проверкой на переполнение;
@@ -485,8 +258,6 @@
 
 Модификации
  * *Базовая*
-    * [Исходный код тестов](java/queue/QueueTest.java)
-    * [Откомпилированные тесты](artifacts/queue/QueueTest.jar)
  * *CountIf* (31-33)
     * Реализовать метод `countIf`, возвращающий число элеменов очереди, удовлетворяющих
       [предикату](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Predicate.html).
@@ -528,8 +299,6 @@
 Модификации
  * *Базовая*
     * Классы должны находиться в пакете `queue`
-    * [Исходный код тестов](java/queue/ArrayQueueTest.java)
-    * [Откомпилированные тесты](artifacts/queue/ArrayQueueTest.jar)
  * *Count* (31-33)
     * Реализовать метод `count`, возвращающий число вхождений элемента в очередь.
  * *Index* (34-35)
@@ -565,8 +334,6 @@
 Модификации
  * *Базовая*
     * Класс `BinarySearch` должен находиться в пакете `search`
-    * [Исходный код тестов](java/search/BinarySearchTest.java)
-    * [Откомпилированные тесты](artifacts/search/BinarySearchTest.jar)
  * *Missing* (31-33)
     * На вход подаётся число `x` и массив, отсортированный по неубыванию.
     * Если в массиве отсутствует элемент, равный `x`, то требуется
@@ -591,38 +358,17 @@
       Требуется найти минимальную возможную длину первого массива.
     * Класс должен иметь имя `BinarySearchUni`
 
-Для того, чтобы протестировать базовую модификацию домашнего задания:
-
- 1. Скачайте тесты ([BinarySearchTest.jar](artifacts/search/BinarySearchTest.jar))
- 1. Откомпилируйте `BinarySearch.java`
- 1. Проверьте, что создался `BinarySearch.class`
- 1. В каталоге, в котором находится `search/BinarySearch.class` выполните команду
-
-    ```
-       java -jar <путь к BinarySearchTest.jar> Base
-    ```
-
-    Например, если `BinarySearchTest.jar` находится в текущем каталоге, 
-    а `BinarySearch.class` в каталоге `search`, выполните команду
-
-    ```
-        java -jar BinarySearchTest.jar Base
-    ```
-
 ## Домашнее задание 1. Обработка ошибок
 
 Модификации
  * *Base*
     * Класс `ExpressionParser` должен реализовывать интерфейс
-        [TripleParser](java/expression/exceptions/TripleParser.java)
+        `TripleParser`
     * Классы `CheckedAdd`, `CheckedSubtract`, `CheckedMultiply`,
         `CheckedDivide` и `CheckedNegate` должны реализовывать интерфейс
-        [TripleExpression](java/expression/TripleExpression.java)
+        `TripleExpression`
     * Нельзя использовать типы `long` и `double`
     * Нельзя использовать методы классов `Math` и `StrictMath`
-    * [Исходный код тестов](java/expression/exceptions/ExceptionsTest.java)
-        * Первый аргумент: `easy` или `hard`
-        * Последующие аргументы: модификации
  * *PowLog* (36-39)
     * Дополнительно реализуйте бинарные операции (максимальный приоритет):
         * `**` – возведение в степень, `2 ** 3` равно 8;
@@ -643,4 +389,3 @@
     * Дополнительно реализуйте унарные операции
       * `l0` – число старших нулевых бит, `l0 123456` равно 15;
       * `t0` – число младших нулевых бит, `t0 123456` равно 6.
-
