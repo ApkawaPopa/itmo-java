@@ -2,8 +2,8 @@
 
 ## Введение в программирование
 
-Решения находятся в prog-intro/\*/\*-solutions/, условия - в prog-intro/README.md
+Решения находятся в prog-intro/\*/\*-solutions/, модификации - в prog-intro/README.md, условия - в prog-intro/Условия.html
 
 ## Парадигмы программирования
 
-Решения находятся в paradigms/\*/\*-solutions/, условия - в paradigms/README.md
+Решения находятся в paradigms/\*/\*-solutions/, модификации - в paradigms/README.md, условия - в paradigms/Условия.html
